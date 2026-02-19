@@ -6100,6 +6100,8 @@ impl ThreadView {
 
         PopoverMenu::new(("permission-granularity", entry_ix))
             .with_handle(permission_dropdown_handle.clone())
+            .anchor(Corner::TopRight)
+            .attach(Corner::BottomRight)
             .trigger(
                 Button::new(("granularity-trigger", entry_ix), current_label)
                     .icon(IconName::ChevronDown)
